@@ -3,21 +3,25 @@
     <head>
         <title>About Us - MY FINAL PROJECT</title>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
 
         <style>
             .member-row {
                 display: flex;
-                align-items: flex-start; /* 👈 CLAVE: alinea arriba */
+                align-items: flex-start;
                 margin-bottom: 3em;
+                width: 100%;
             }
 
             .member-img {
-                width: 300px;      /* ancho fijo */
-                height: 400px;     /* alto fijo */
-                object-fit: cover; /* recorta sin deformar */
-                border-radius: 10px; /* opcional: bordes redondeados */
+                width: 100%;
+                max-width: 250px;
+                height: auto;
+                object-fit: cover;
+                border-radius: 10px;
+                display: block;
+                margin: 0 auto;
             }
 
             .member-info {
@@ -34,19 +38,26 @@
                 text-align: justify;
             }
 
-            @media screen and (max-width: 1000px) {
+            /* Adaptación ideal para celulares */
+            @media screen and (max-width: 840px) {
                 .member-row {
                     flex-direction: column;
                     text-align: center;
+                    align-items: center;
                 }
                 .member-info {
                     padding-left: 0;
-                    margin-top: 15px;
+                    margin-top: 20px;
+                }
+                .member-description {
+                    text-align: center;
                 }
             }
+            
             .first.major {
-                text-align: left;   /* 👈 centra TODO el bloque */
-                margin-bottom: 2.5em; /* espacio con los perfiles */
+                text-align: left;
+                margin-bottom: 2.5em;
+                width: 100%;
             }
         </style>
     </head>
@@ -54,76 +65,70 @@
     <body class="right-sidebar is-preload">
         <div id="page-wrapper">
 
-    <!-- Header -->
-				<div id="header-wrapper">
-					<div class="container">
+            <div id="header-wrapper">
+                <div class="container">
+                    <header id="header">
+                        <div class="inner">
+                            <h1><a href="index.html" id="logo">About Us</a></h1>
 
-						<!-- Header -->
-							<header id="header">
-								<div class="inner">
+                            <nav id="nav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="#">Assignments</a>
+                                        <ul>
+                                            <li><a href="WEEK_1.html">Week 1: Principles & Practices</a></li>
+                                            <li><a href="WEEK_2(draft).html">Week 2: Project Management</a></li>
+                                            <li><a href="WEEK_3.html">Week 3: Computer Aided Design</a></li>
+                                            <li><a href="WEEK_4.html">Week 4: Circuito</a></li>
+                                            <li><a href="MY_FINAL_PROJECT.HTML">My Final Project</a></li>
+                                            <li><a href="Examen_Interciclo.html">Examen Interciclo</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="current_page_item"><a href="ABOUT_US.html">About Us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </header>
+                </div>
+            </div>
 
-									<!-- Logo -->
-										<h1><a href="index.html" id="logo">About Us</a></h1>
-
-									<!-- Nav -->
-										<nav id="nav">
-											<ul>
-												<li ><a href="index.html">Home</a></li>
-												<li><a href="#">Assignments</a>
-													<ul>
-														<li><a href="WEEK_1.html">Week 1: Principles & Practices</a></li>
-														<li><a href="WEEK_2(draft).html">Week 2: Project Management</a></li>
-														<li><a href="WEEK_3.html">Week 3: Computer Aided Design</a></li>
-                                                        <li><a href="WEEK_4.html">Week 4: Circuito</a></li>
-														<li><a href="MY_FINAL_PROJECT.HTML">My Final Project</a></li>
-                                                        <li><a href="Examen_Interciclo.html">Examen Innterciclo</a></li>
-													</ul>
-												</li>
-												<li  class="current_page_item"><a href="ABOUT_US.html">About Us</a></li>
-											</ul>
-										</nav>
-
-								</div>
-							</header>
-            <!-- Main -->
             <div id="main-wrapper">
                 <div class="wrapper style1">
                     <div class="inner">
                         <div class="container">
                             <div class="row">
 
-                                <!-- Sidebar (opcional info extra) -->
-                                <div class="first major">
-                                    <section>
-                                        <h2>Nuestro Equipo</h2>
-                                        <p>Somos estudiantes de Ingeniería Industrial enfocados en innovación, optimización y desarrollo de soluciones.</p>
-                                    </section>
+                                <div class="col-12">
+                                    <div class="first major">
+                                        <section>
+                                            <h2>Nuestro Equipo</h2>
+                                            <p>Somos estudiantes de Ingeniería Industrial enfocados en innovación, optimización y desarrollo de soluciones.</p>
+                                        </section>
+                                    </div>
                                 </div>
 
-                                <!-- Contenido principal -->
-                                <div class="col-8 col-12-medium imp-medium">
+                                <div class="col-12">
 
-                                    <!-- MIEMBRO 1 -->
                                     <div class="member-row">
-                                        <div class="col-4">
-                                            <img src="images/imagen_pao.jpeg" class="member-img">
+                                        <div style="flex: 0 0 30%; max-width: 250px; width: 100%;">
+                                            <img src="images/imagen_pao.jpeg" class="member-img" alt="Paola Fajardo">
                                         </div>
-                                        <div class="member-info col-8">
+                                        <div class="member-info" style="flex: 1;">
                                             <h3>Paola Fajardo</h3>
                                             <p><strong>Rol: Organizadora</strong></p>
                                             <p class="member-description">
-                                                Soy estudiante de Ingeniería Industrial en la Universidad Estatal de Cuenca, apasionada por la mejora continua y el desarrollo de servicios que generen valor real. Me interesa especialmente integrar tecnología y sostenibilidad como pilares para construir soluciones innovadoras y eficientes.
-                                                Me considero una persona organizada, disfruto trabajar con personas, conectar ideas y enfrentar nuevos desafíos que me permitan superar mis propios límites.
+                                                Soy estudiante de Ingeniería Industrial en la Universidad Estatal de Cuenca, apasionada por la mejora continua y el desarrollo de servicios que generen valor real. Me interesa especialmente integrar tecnología y sostenibilidad como pilares para construir soluciones innovadoras y eficientes. Me considero una persona organizada, disfruto trabajar con personas, conectar ideas y enfrentar nuevos desafíos que me permitan superar mis propios límites.
                                             </p>
                                         </div>
                                     </div>
 
-                                    <!-- MIEMBRO 2 -->
+                                    <hr style="margin: 2em 0;" />
+
                                     <div class="member-row">
-                                        <div class="col-4">
-                                            <img src="images/imagen_lucho.jpeg" class="member-img">
+                                        <div style="flex: 0 0 30%; max-width: 250px; width: 100%;">
+                                            <img src="images/imagen_lucho.jpeg" class="member-img" alt="Luis Barros">
                                         </div>
-                                        <div class="member-info col-8">
+                                        <div class="member-info" style="flex: 1;">
                                             <h3>Luis Barros</h3>
                                             <p><strong>Rol: Desarrollador</strong></p>
                                             <p class="member-description">
@@ -132,26 +137,28 @@
                                         </div>
                                     </div>
 
-                                    <!-- MIEMBRO 3 -->
+                                    <hr style="margin: 2em 0;" />
+
                                     <div class="member-row">
-                                        <div class="col-4">
-                                            <img src="images/imagen_johnny.jpeg" class="member-img">
+                                        <div style="flex: 0 0 30%; max-width: 250px; width: 100%;">
+                                            <img src="images/imagen_johnny.jpeg" class="member-img" alt="Johnny Duchi">
                                         </div>
-                                        <div class="member-info col-8">
+                                        <div class="member-info" style="flex: 1;">
                                             <h3>Johnny Duchi</h3>
                                             <p><strong>Rol: Estratega creativo</strong></p>
                                             <p class="member-description">
-                                                Estudiante de Ingeniería Industrial (6to ciclo) en la Universidad de Cuenca, con interés en áreas como gestión de procesos, diseño de productos y mejora de sistemas productivos. Posee habilidades en análisis, resolución de problemas y trabajo en equipo.
-                                                 Participa en el desarrollo de proyectos académicos orientados a la creación de soluciones innovadoras, aplicando criterios de eficiencia, calidad y sostenibilidad
+                                                Estudiante de Ingeniería Industrial (6to ciclo) en la Universidad de Cuenca, con interés en áreas como gestión de procesos, diseño de productos y mejora de sistemas productivos. Posee habilidades en análisis, resolución de problemas y trabajo en equipo. Participa en el desarrollo de proyectos académicos orientados a la creación de soluciones innovadoras, aplicando criterios de eficiencia, calidad y sostenibilidad.
+                                            </p>
                                         </div>
                                     </div>
 
-                                    <!-- MIEMBRO 4 -->
+                                    <hr style="margin: 2em 0;" />
+
                                     <div class="member-row">
-                                        <div class="col-4">
-                                            <img src="images/imagen_sebas.jpeg" class="member-img">
+                                        <div style="flex: 0 0 30%; max-width: 250px; width: 100%;">
+                                            <img src="images/imagen_sebas.jpeg" class="member-img" alt="Santiago Vásconez">
                                         </div>
-                                        <div class="member-info col-8">
+                                        <div class="member-info" style="flex: 1;">
                                             <h3>Santiago Vásconez</h3>
                                             <p><strong>Rol: Solucionador</strong></p>
                                             <p class="member-description">
@@ -160,33 +167,21 @@
                                         </div>
                                     </div>
 
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Footer -->
-            <div id="footer-wrapper">
+                                </div> </div> </div> </div> </div> </div> <div id="footer-wrapper">
                 <footer id="footer" class="container">
                     <div id="copyright">
                         <ul class="menu">
-                            <li>&copy; Grupo 8</li>
+                            <li>&copy; Grupo 8. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
                         </ul>
                     </div>
                 </footer>
             </div>
 
-        </div>
-
-        <!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        </div> <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>

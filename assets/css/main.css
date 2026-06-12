@@ -2425,5 +2425,49 @@ input, select, textarea {
 				margin-top: 0;
 				padding: 3em 0 1em 0;
 			}
+		/* Parche definitivo para títulos amontonados en celulares */
+			#nav {
+				display: block !important;
+			}
 
+			#nav ul {
+				display: block !important;
+				position: static !important;
+				box-shadow: none !important;
+				background: transparent !important;
+				padding: 0 !important;
+			}
+
+			#nav ul li {
+				display: block !important;
+				float: none !important;
+				margin: 0 !important;
+				padding: 8px 0 !important;
+				border: none !important;
+				position: relative !important;
+				height: auto !important;
+			}
+
+			#nav ul li a {
+				display: block !important;
+				line-height: 1.4 !important;
+				padding: 10px 20px !important;
+				white-space: normal !important;
+			}
+			/* Forzar a que el panel móvil no tape la pantalla completa */
+			#navPanel {
+				background: rgba(40, 40, 40, 0.95) !important; /* Color oscuro pero con ligera transparencia */
+				max-width: 275px !important; /* Limita el ancho del menú para que no ocupe toda la pantalla */
+			}
+
+			/* Evitar que el contenedor del menú móvil rompa el fondo de la página */
+			body.navPanel-visible {
+				overflow-x: hidden !important;
+			}
+
+			/* Si la pantalla gris era un bloque fantasma, esto lo vuelve invisible */
+			.navPanel-toggle {
+				z-index: 10001 !important; /* Asegura que el botón de tres líneas siempre sea visible para cerrar/abrir */
+			}
 	}
+	
