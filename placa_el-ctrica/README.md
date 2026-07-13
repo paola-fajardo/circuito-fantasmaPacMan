@@ -1,1 +1,0 @@
-# placa_el-ctrica
